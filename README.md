@@ -2,6 +2,10 @@
 
 Projeto de um jogo de navinha simples para ensino em um grupo de estudos.
 
+link dos assets do projeto
+https://www.assetstore.unity3d.com/en/#!/content/13866
+
+
 ##Aula 1 - Geral
 
 	Visão geral sobre a ferramenta e seus recursos
