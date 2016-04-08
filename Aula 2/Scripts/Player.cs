@@ -6,9 +6,11 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	// variavel que determina a minha velocidade
-	float speed = 10f;
+	// sempre que uma variavel for publica vc pode mudar o valor dela direto no objeto(prefab), 
+	// por isto deve tomar um certo cuidado, pois as vezes mudamos o valor no codigo mas no objeto fica outro.
+	public float speed = 10f;
 
-	// Uesta função é chamada apenas quando inicia
+	// Nesta função é chamada apenas quando inicia
 	void Start () {
 	
 	}
@@ -30,13 +32,23 @@ public class Player : MonoBehaviour {
 		// Adiciono uma velocidade a meu player
 		// GetComponent faz com que eu pegue algum component ou script inserido no meu objeto(prefab)
 		// O velocity aplica o deslocamento apenas enquanto a força é aplicada, assim que parar de receber esta força o deslocamento tambem para.
-		 GetComponent<Rigidbody2D> ().velocity = movement;
+		GetComponent<Rigidbody2D> ().velocity = movement;
 
 		/*
 		 * Outra forma de deslocar um objeto é inserindo uma força a ele, mas este funciona mais como um empurrão 
 		 * que tem um grande impacto no começo e depois vai perdendo sua força, usado geralmente para pulos em jogos de plataforma.
 		 *  
 		 *	GetComponent<Rigidbody2D> ().AddForce ( new Vector2( 10f, 0f ) );
+		 */
+
+		/*
+		 * Outra forma de fazer embora errado neste caso é usar os metodos o Transform
+		 * não é indicado o uso deste recurso pois oque ele faz é um "micro teleporte" 
+		 * caso deveria acontecer uma colisão ela só é detectada apos o deslocamento, diferente do velocity
+		 * 
+		 * transform.Translate(Vector3.right * moveHorizontal * speed * Time.deltaTime);
+		 * 
+		 * transform.position = new Vector3(transform.position.x + (moveHorizontal * speed * Time.deltaTime), transform.position.y);
 		 */
 
 	}
