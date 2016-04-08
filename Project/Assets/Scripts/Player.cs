@@ -10,9 +10,15 @@ public class Player : MonoBehaviour {
 	// por isto deve tomar um certo cuidado, pois as vezes mudamos o valor no codigo mas no objeto fica outro.
 	public float speed = 10f;
 
+	[Header ("Atirar")]
+
+	// variavel com a bala para atirar
+	[Tooltip("Prefab da bala")]
+	public GameObject bullet;
+	float lastShoot = 0;
+
 	// Nesta função é chamada apenas quando inicia
 	void Start () {
-	
 	}
 	
 	// Esta função é chamada a cada ciclo
@@ -54,6 +60,22 @@ public class Player : MonoBehaviour {
 		// limito a navegação na tela
 		// o metodo Mathf.Clamp me retorna um valor, limitando o maximo e o minimo, com isto eu forço estes valores na posição
 		transform.position = new Vector2( Mathf.Clamp (transform.position.x, -7, 7), Mathf.Clamp (transform.position.y,-3.5f, 3f) );
+
+		shoot ();
+
+	}
+
+	// função para atirar
+	void shoot () {
+
+		// caso ele apertar a tecla Space eu atiro
+		// verifico se o ultimo tiro não foi a pouco tempo, para impedir tiros consecutivos
+		if (Input.GetKeyDown (KeyCode.Space) && Time.time >= lastShoot + 5f ) {
+
+			// instancio um novo objeto(prefab) na tela
+			GameObject instance = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
+			lastShoot = Time.time;
+		}
 
 	}
 
