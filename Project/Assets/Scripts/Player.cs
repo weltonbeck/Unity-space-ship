@@ -53,7 +53,7 @@ public class Player : MonoBehaviour {
 
 		// limito a navegação na tela
 		// o metodo Mathf.Clamp me retorna um valor, limitando o maximo e o minimo, com isto eu forço estes valores na posição
-		transform.position = new Vector2( Mathf.Clamp (transform.position.x, -7, 7), transform.position.y );
+		transform.position = new Vector2( Mathf.Clamp (transform.position.x, -7, 7), Mathf.Clamp (transform.position.y,-3.5f, 3f) );
 
 	}
 

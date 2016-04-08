@@ -22,19 +22,20 @@ https://www.assetstore.unity3d.com/en/#!/content/13866
 	- Collision
 	- AddForce e Velocity
 
-##Aula 3 - Camera, Iluminação e Background paralax
+##Aula 3 - Iluminação e Background paralax
 	
 	Faremos a camera seguir o personagem, limitaremos a area de navegação do personagem e colocaremos o cenario.
 
 	- Camera
 	- Light types
-	- Background
+	- Background paralax
 
 ##Aula 4 - Atirar, Particulas e Sons
 
 	Finalmente faremos a nave atirar
 
 	- Instanciate bullet
+	- explosion
 
 ##Aula 5 - Perigos
 
