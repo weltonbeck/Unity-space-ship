@@ -39,30 +39,27 @@ https://www.assetstore.unity3d.com/en/#!/content/13866
 
 ##Aula 5 - Perigos
 
-	Criaremos meteoros e outras naves que aparecerão para destruirmos
+	Criaremos meteoros que aparecerão para destruirmos
 
+	- Instanciate Enemmy
 	- Destroy Meteor
 
 ##Aula 6 - Inimigos
 
 	Colocaremos um inimigo que atira
 
+	- Instanciate Meteor
 	- Basic IA
 
-##Aula 7 - Game Controller
-
-	- Instanciate Enemmy
-	- Instanciate Meteor
-	- Life
-
-##Aula 8 - Score E Huds
+##Aula 7 - Score E Huds
 
 	Faremos a tela de inicio do jogo e o sistema de pontos
 
+	- Life
 	- Tela Inicial
 	- Score Hud
 
-##Aula 9 - Publicação
+##Aula 8 - Publicação
 
 	iremos compilar o jogo para mobile e para PC
 
