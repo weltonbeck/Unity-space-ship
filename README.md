@@ -35,30 +35,34 @@ https://www.assetstore.unity3d.com/en/#!/content/13866
 	Finalmente faremos a nave atirar
 
 	- Instanciate bullet
-	- explosion
+	- Explosion
 
 ##Aula 5 - Perigos
 
 	Criaremos meteoros e outras naves que aparecerão para destruirmos
 
-	- Instanciate Meteor
 	- Destroy Meteor
 
 ##Aula 6 - Inimigos
 
 	Colocaremos um inimigo que atira
 
-	- Instanciate Enemmy
 	- Basic IA
 
-##Aula 7 - Score E Huds
+##Aula 7 - Game Controller
+
+	- Instanciate Enemmy
+	- Instanciate Meteor
+	- Life
+
+##Aula 8 - Score E Huds
 
 	Faremos a tela de inicio do jogo e o sistema de pontos
 
 	- Tela Inicial
 	- Score Hud
 
-##Aula 8 - Publicação
+##Aula 9 - Publicação
 
 	iremos compilar o jogo para mobile e para PC
 
