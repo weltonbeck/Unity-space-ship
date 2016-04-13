@@ -50,6 +50,10 @@ public class Player : MonoBehaviour {
 		 * 
 		 * transform.position = new Vector3(transform.position.x + (moveHorizontal * speed * Time.deltaTime), transform.position.y);
 		 */
+		 
+		// faz o efeito de rotacionar ao virar
+		// o objeto Quaternion é usado para controlar rotação 
+		transform.rotation = Quaternion.Euler (0.0f, GetComponent<Rigidbody2D> ().velocity.x * -5, 0.0f);
 
 	}
 

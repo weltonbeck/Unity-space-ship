@@ -56,6 +56,10 @@ public class Player : MonoBehaviour {
 		 * 
 		 * transform.position = new Vector3(transform.position.x + (moveHorizontal * speed * Time.deltaTime), transform.position.y);
 		 */
+				
+		// faz o efeito de rotacionar ao virar
+		// o objeto Quaternion é usado para controlar rotação 
+		transform.rotation = Quaternion.Euler (0.0f, GetComponent<Rigidbody2D> ().velocity.x * -5, 0.0f);
 
 		// limito a navegação na tela
 		// o metodo Mathf.Clamp me retorna um valor, limitando o maximo e o minimo, com isto eu forço estes valores na posição
@@ -70,7 +74,7 @@ public class Player : MonoBehaviour {
 
 		// caso ele apertar a tecla Space eu atiro
 		// verifico se o ultimo tiro não foi a pouco tempo, para impedir tiros consecutivos
-		if (Input.GetKeyDown (KeyCode.Space) && Time.time >= lastShoot + 5f ) {
+		if (Input.GetKeyDown (KeyCode.Space) && lastShoot + .3f <= Time.time ) {
 
 			// instancio um novo objeto(prefab) na tela
 			GameObject instance = Instantiate (bullet, transform.position, transform.rotation) as GameObject;

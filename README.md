@@ -18,40 +18,35 @@ https://www.assetstore.unity3d.com/en/#!/content/13866
 
 	Inicio do projeto, aqui faremos o controle da nave
 
+	- Transform
 	- RigidBody
-	- Collision
-	- AddForce e Velocity
+	- Velocity
+	- AddForce
+	- Rotate
 
-##Aula 3 - Iluminação e Background paralax
+##Aula 3 - Iluminação, Atirar, Sons e Background Repeat
 	
-	Faremos a camera seguir o personagem, limitaremos a area de navegação do personagem e colocaremos o cenario.
+	Limitaremos a area de navegação do personagem e colocaremos o cenario.
 
-	- Camera
 	- Light types
-	- Background paralax
-
-##Aula 4 - Atirar, Particulas e Sons
-
-	Finalmente faremos a nave atirar
-
+	- Background Repeat
 	- Instanciate bullet
-	- Explosion
 
-##Aula 5 - Perigos
+##Aula 4 - Perigos
 
 	Criaremos meteoros que aparecerão para destruirmos
 
-	- Instanciate Enemmy
+	- Instanciate Meteor
 	- Destroy Meteor
 
-##Aula 6 - Inimigos
+##Aula 5 - Inimigos
 
 	Colocaremos um inimigo que atira
 
-	- Instanciate Meteor
+	- Instanciate Enemmy
 	- Basic IA
 
-##Aula 7 - Score E Huds
+##Aula 6 - Score E Huds
 
 	Faremos a tela de inicio do jogo e o sistema de pontos
 
@@ -59,8 +54,10 @@ https://www.assetstore.unity3d.com/en/#!/content/13866
 	- Tela Inicial
 	- Score Hud
 
-##Aula 8 - Publicação
+##Aula 7 - Publicação
 
-	iremos compilar o jogo para mobile e para PC
+	Iremos compilar o jogo para mobile e para PC
+	Para esta aula precisamos do SDK tools package do android instalado.
+	http://developer.android.com/intl/pt-br/sdk/index.html#Other
 
 	
