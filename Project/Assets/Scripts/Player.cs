@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
 	// variavel que determina a minha velocidade
 	// sempre que uma variavel for publica vc pode mudar o valor dela direto no objeto(prefab), 
 	// por isto deve tomar um certo cuidado, pois as vezes mudamos o valor no codigo mas no objeto fica outro.
-	public float speed = 10f;
+	public float speed = 15f;
 
 	[Header ("Atirar")]
 
@@ -27,9 +27,13 @@ public class Player : MonoBehaviour {
 	// Esta função é chamada a cada ciclo
 	void Update () {
 
-		// Pego o movimento horizontal do controle
-		// ele me retorna de -1 a +1 sendo 0 o estado parado
-		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveHorizontal = Input.acceleration.x;
+
+		if ( moveHorizontal == 0 ) {
+			// Pego o movimento horizontal do controle
+			// ele me retorna de -1 a +1 sendo 0 o estado parado
+			moveHorizontal = Input.GetAxis ("Horizontal");
+		}
 
 		// pego o movimento vertical
 		float moveVertical = Input.GetAxis ("Vertical");
@@ -77,7 +81,8 @@ public class Player : MonoBehaviour {
 
 		// caso ele apertar a tecla Space eu atiro
 		// verifico se o ultimo tiro não foi a pouco tempo, para impedir tiros consecutivos
-		if (Input.GetKeyDown (KeyCode.Space) && lastShoot + .2f <= Time.time ) {
+		if ( ( Input.GetKeyDown (KeyCode.Space) 
+		      || Input.GetTouch(0).phase == TouchPhase.Began ) && lastShoot + .2f <= Time.time ) {
 
 			// instancio um novo objeto(prefab) na tela
 			GameObject instance = Instantiate (bullet, transform.position, transform.rotation) as GameObject;

@@ -5,7 +5,8 @@ public class Menu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		// falo qual é a orientação da tela
+		Screen.orientation = ScreenOrientation.LandscapeLeft;
 	}
 	
 	// Update is called once per frame

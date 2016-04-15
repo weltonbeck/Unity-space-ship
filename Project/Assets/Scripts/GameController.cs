@@ -26,6 +26,9 @@ public class GameController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		// falo qual é a orientação da tela
+		Screen.orientation = ScreenOrientation.LandscapeLeft;
+
 		// gravo o coração em uma variavel
 		GameObject heart = transform.FindChild ("Panel/Hearts/Heart").gameObject;
 
