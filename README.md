@@ -44,7 +44,8 @@ https://www.assetstore.unity3d.com/en/#!/content/13866
 	Colocaremos um inimigo que atira
 
 	- Instanciate Enemmy
-	- Basic IA
+	- Andar pros lados
+	- Atirar
 
 ##Aula 6 - Score E Huds
 
