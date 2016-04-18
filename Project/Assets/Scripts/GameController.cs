@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour {
 
 			// mudo o posicionamento do coração, colocando cada um um pouco pro lado
 			RectTransform instanciateBarRect = instanciate.GetComponent<RectTransform> ();
-			instanciateBarRect.anchoredPosition = new Vector2 ( instanciateBarRect.anchoredPosition.x + ( i * 30 ), instanciateBarRect.anchoredPosition.y );
+			instanciateBarRect.anchoredPosition = new Vector2 ( instanciateBarRect.anchoredPosition.x + ( i * 110 ), instanciateBarRect.anchoredPosition.y );
 			// jogo o elemento dentro da variavel hudsLifes para controlar mais facil
 			hudLifes.Add( instanciate );
 		}
